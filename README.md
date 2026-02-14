@@ -2,20 +2,24 @@
 
 This repository contains the code for the MLOps Assignment 1.
 
-## Setup
+## Create S3 Bucket
+```text
+bucket name: mlops-5981
+```
 
-To set up the environment, run the following command:
+## Create IAM Role
+```text
+Role name: mlops-s3-role
+```
 
+## Execution Steps
+
+1) Upload the dataset to the S3 bucket.
+2) Run the following command to set up the environment:
 ```bash
 ./setup_ml_env.sh
 ```
-
-This will create a virtual environment and install the required dependencies.
-
-## Usage
-
-To train the model, run the following command:
-
+3) Run the following command to train the model:
 ```bash
 python train_pipeline.py
 ```
@@ -24,4 +28,11 @@ This will train the model and evaluate its accuracy.
 
 ## Results
 
-The results will be printed to the console.
+The results will be printed to the console, and the best model will be saved to the S3 bucket.
+
+```text
+Model: RandomForest
+Accuracy: 0.84475
+Timestamp: 2026-02-14 18:40:22
+----------------------------------------
+```
