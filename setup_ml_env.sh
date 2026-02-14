@@ -22,6 +22,6 @@ source $VENV_PATH/bin/activate
 
 echo "Installing ML libraries..."
 pip install --upgrade pip
-pip install pandas scikit-learn numpy
+pip install -r requirements.txt
 
 echo "Setup completed successfully."
